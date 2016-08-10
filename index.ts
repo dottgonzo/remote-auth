@@ -48,6 +48,8 @@ export default class {
                                 obj.data.appdb.user = o.user;
                                 obj.token = jwt.sign(obj.data.appdb, _this.secret)
                                 resolve(obj)
+                            } else {
+                                reject("server error")
                             }
                         })
                     } else {
